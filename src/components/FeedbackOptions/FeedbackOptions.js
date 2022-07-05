@@ -7,7 +7,9 @@ const feedbackOptions = ({ options, onLeaveFeedback }) => {
                 key={button}
                 type="button"
                 name={button}
-                onClick={onLeaveFeedback}>
+                onClick={e => {
+                    onLeaveFeedback(e.target.name);
+                }}>
                 {button}
             </button>
         );
